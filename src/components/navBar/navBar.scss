@@ -1,10 +1,11 @@
 header {
   width: calc(100vw - 8px);
   height: 100px;
-  background-color: #fff4;
+  background-color: #97497959;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
 
   ul {
     height: 100%;

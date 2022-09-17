@@ -1,15 +1,19 @@
-import React from 'react'
+import React from "react";
 
-function SingleChar() {
-    return (
-        <div>
-            <p>This is a single char pop up</p>
-            {/* 
-                img
-                több adat a json file-ból
-             */}
-        </div>
-    )
+function SingleChar({ clickedCharDetails }) {
+  return (
+    <>
+      <img src={clickedCharDetails.image} alt={clickedCharDetails.name} />
+      <div className="detWrapper">
+        <h2 className="modName">
+          #{clickedCharDetails.id} {clickedCharDetails.name}
+        </h2>
+        <h3 className="modStatus">Status: {clickedCharDetails.status}</h3>
+        <h3 className="modSpec">Species: {clickedCharDetails.species}</h3>
+        <h3 className="modGender">Gender: {clickedCharDetails.gender}</h3>
+      </div>
+    </>
+  );
 }
 
-export default SingleChar
+export default SingleChar;

@@ -26,6 +26,7 @@ export const useCharacters = (pageNum = 1) => {
      */
 export const useLocations = (pageNum = 1) => {
   const [locations, setUrl] = useFetch(mainUrls.locations + pageNum);
+
   useEffect(() => {
     setUrl(mainUrls.locations + pageNum);
   }, [pageNum]);
