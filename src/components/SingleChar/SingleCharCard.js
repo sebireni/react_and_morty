@@ -1,5 +1,5 @@
-import "../pages/AllChars/AllChars.css";
 import React from "react";
+import "../../pages/AllChars/AllChars.css";
 
 const SingleCharCard = ({ handleClick, charDetails }) => {
   return (

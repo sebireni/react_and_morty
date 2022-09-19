@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useLocations } from "../../../src/api/useData";
 import "./AllLoc.css";
 import SingleLoc from "../../components/SingleLocation/SingleLoc";
+import SingleLocCard from "../../components/SingleLocation/SingleLocCard";
 
 function AllLoc() {
   const [pageCounter, setPageCounter] = useState(1);
@@ -59,15 +60,10 @@ function AllLoc() {
         {locResults &&
           locResults.map((loc) => {
             return (
-              <div
-                onClick={() => setID(loc.id)}
-                className="locCard"
-                key={loc.id}
-              >
-                <h2 className="locID">#{loc.id}</h2>
-                <h1>{loc.name}</h1>
-                <h3>{loc.type}</h3>
-              </div>
+              <SingleLocCard
+                handleClick={() => setID(loc.id)}
+                locDetails={loc}
+              />
             );
           })}
       </div>

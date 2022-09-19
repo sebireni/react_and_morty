@@ -3,7 +3,7 @@ import { useCharacters } from "../../../src/api/useData";
 import "./AllChars.css";
 import { useState, useEffect } from "react";
 import SingleChar from "../../components/SingleChar/SingleChar.js";
-import SingleCharCard from "../../components/SingleCharCard.js";
+import SingleCharCard from "../../components/SingleChar/SingleCharCard.js";
 
 function AllChars() {
   const [pageCounter, setPageCounter] = useState(1);
@@ -65,14 +65,6 @@ function AllChars() {
                 handleClick={() => setID(char.id)}
                 charDetails={char}
               />
-              //   <div onClick={() => setID(char.id)} className="charCard">
-              //     <img className="cardImg" src={char.image} alt="" />
-              //     <div className="detailWrapper">
-              //       <h2 className="charID">#{char.id}</h2>
-              //       <h2>{char.name}</h2>
-              //       <h3>{char.species}</h3>
-              //     </div>
-              //   </div>
             );
           })}
       </div>
