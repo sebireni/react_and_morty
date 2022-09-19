@@ -4,7 +4,7 @@ import React from "react";
 const SingleCharCard = ({ handleClick, charDetails }) => {
   return (
     <div onClick={handleClick} className="charCard">
-      <img className="cardImg" src={charDetails.image} alt="" />
+      <img className="cardImg" src={charDetails.image} alt="character" />
       <div className="detailWrapper">
         <h2 className="charID">#{charDetails.id}</h2>
         <h2>{charDetails.name}</h2>

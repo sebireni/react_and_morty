@@ -1,7 +1,8 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { useLocations } from "../../../src/api/useData";
 import "./AllLoc.css";
-import { useState, useEffect } from "react";
+import SingleLoc from "../../components/SingleLocation/SingleLoc";
 
 function AllLoc() {
   const [pageCounter, setPageCounter] = useState(1);
@@ -85,14 +86,7 @@ function AllLoc() {
         <div className="modal">
           <div onClick={handleToggleModal} className="overlay"></div>
           <div className="modal-content">
-            <div className="detWrapper">
-              <h2 className="modName">
-                #{clickedLoc.id} {clickedLoc.name}
-              </h2>
-              <h3 className="modStatus">Type: {clickedLoc.type}</h3>
-              <h3 className="modSpec">Dimension: {clickedLoc.dimension}</h3>
-            </div>
-
+            {clickedLoc && <SingleLoc clickedLocDetails={clickedLoc} />}
             <button className="close-modal" onClick={handleToggleModal}>
               X
             </button>

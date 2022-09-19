@@ -98,7 +98,6 @@ function AllChars() {
           ></div>
           <div className="modal-content">
             {clickedChar && <SingleChar clickedCharDetails={clickedChar} />}
-
             <button
               className="close-modal"
               onClick={() => {

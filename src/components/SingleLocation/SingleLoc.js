@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
 
-function SingleLoc() {
-    return (
-        <div>
-            <p>Page with a single location</p>
-        </div>
-    )
+function SingleLoc({ clickedLocDetails }) {
+  return (
+    <div className="detWrapper">
+      <h2 className="modName">
+        #{clickedLocDetails.id} {clickedLocDetails.name}
+      </h2>
+      <h3 className="modStatus">Type: {clickedLocDetails.type}</h3>
+      <h3 className="modSpec">Dimension: {clickedLocDetails.dimension}</h3>
+    </div>
+  );
 }
 
-export default SingleLoc
+export default SingleLoc;
