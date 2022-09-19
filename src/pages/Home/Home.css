@@ -18,7 +18,7 @@ body p {
   margin-bottom: 50px;
 }
 
-body #logo {
+body .logo {
   width: 600px;
   margin: auto;
   margin-top: 150px;
@@ -27,7 +27,7 @@ body #logo {
           transition-duration: 3s;
 }
 
-body #logo:active {
+body .logo:active {
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
 }

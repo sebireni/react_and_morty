@@ -5,8 +5,8 @@ import NavButton from "../../components/Button/NavButton";
 
 const Home = () => {
   return (
-    <div id="home">
-      <img id="logo" alt="Rick and Morty logo" src={Logo} />
+    <div className="home">
+      <img className="logo" alt="Rick and Morty logo" src={Logo} />
       <div className="content">
         <NavButton route="/allCharacters" buttonText={"Characters"} />
         <NavButton route="/allLocations" buttonText={"Locations"} />
