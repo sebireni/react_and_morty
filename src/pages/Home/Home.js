@@ -3,7 +3,7 @@ import "./Home.css";
 import Logo from "../../../src/assets/images/logo.png";
 import NavButton from "../../components/Button/NavButton";
 
-function Home() {
+const Home = () => {
   return (
     <div id="home">
       <img id="logo" alt="Rick and Morty logo" src={Logo} />
@@ -25,6 +25,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function SingleChar({ clickedCharDetails }) {
+const SingleChar = ({ clickedCharDetails }) => {
   return (
     <>
       <img src={clickedCharDetails.image} alt={clickedCharDetails.name} />
@@ -14,6 +14,6 @@ function SingleChar({ clickedCharDetails }) {
       </div>
     </>
   );
-}
+};
 
 export default SingleChar;

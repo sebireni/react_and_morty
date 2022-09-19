@@ -2,16 +2,16 @@ import React from "react";
 import { useState } from "react";
 import "./PaginationBar.css";
 
-function PaginationBar(props) {
+const PaginationBar = (props) => {
   const [pageCounter, setPageCounter] = useState(1);
 
-  function nextPage() {
+  const nextPage = () => {
     setPageCounter(pageCounter + 1);
-  }
+  };
 
-  function prevPage() {
+  const prevPage = () => {
     setPageCounter(pageCounter - 1);
-  }
+  };
 
   return (
     <div className="buttonWrapper">
@@ -19,6 +19,6 @@ function PaginationBar(props) {
       <button onClick={nextPage}>Next page</button>
     </div>
   );
-}
+};
 
 export default PaginationBar;

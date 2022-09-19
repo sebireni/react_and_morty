@@ -5,24 +5,24 @@ import { useState, useEffect } from "react";
 import SingleChar from "../../components/SingleChar/SingleChar.js";
 import SingleCharCard from "../../components/SingleChar/SingleCharCard.js";
 
-function AllChars() {
+const AllChars = () => {
   const [pageCounter, setPageCounter] = useState(1);
 
   const characters = useCharacters(pageCounter);
   const charResults = characters.results;
   const charInfo = characters.info;
 
-  function nextPage() {
+  const nextPage = () => {
     if (charInfo.pages > pageCounter) {
       setPageCounter(pageCounter + 1);
     }
-  }
+  };
 
-  function prevPage() {
+  const prevPage = () => {
     if (pageCounter > 1) {
       setPageCounter(pageCounter - 1);
     }
-  }
+  };
 
   const [modal, setModal] = useState(false);
   const [ID, setID] = useState();
@@ -104,6 +104,6 @@ function AllChars() {
       )}
     </>
   );
-}
+};
 
 export default AllChars;

@@ -1,6 +1,6 @@
 import React from "react";
 
-function SingleLoc({ clickedLocDetails }) {
+const SingleLoc = ({ clickedLocDetails }) => {
   return (
     <div className="detWrapper">
       <h2 className="modName">
@@ -10,6 +10,6 @@ function SingleLoc({ clickedLocDetails }) {
       <h3 className="modSpec">Dimension: {clickedLocDetails.dimension}</h3>
     </div>
   );
-}
+};
 
 export default SingleLoc;

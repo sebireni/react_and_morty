@@ -5,24 +5,24 @@ import "./AllLoc.css";
 import SingleLoc from "../../components/SingleLocation/SingleLoc";
 import SingleLocCard from "../../components/SingleLocation/SingleLocCard";
 
-function AllLoc() {
+const AllLoc = () => {
   const [pageCounter, setPageCounter] = useState(1);
 
   const locations = useLocations(pageCounter);
   const locResults = locations.results;
   const locInfo = locations.info;
 
-  function nextPage() {
+  const nextPage = () => {
     if (locInfo.pages > pageCounter) {
       setPageCounter(pageCounter + 1);
     }
-  }
+  };
 
-  function prevPage() {
+  const prevPage = () => {
     if (pageCounter > 1) {
       setPageCounter(pageCounter - 1);
     }
-  }
+  };
 
   const [modal, setModal] = useState(false);
   const [ID, setID] = useState(0);
@@ -91,6 +91,6 @@ function AllLoc() {
       )}
     </>
   );
-}
+};
 
 export default AllLoc;
