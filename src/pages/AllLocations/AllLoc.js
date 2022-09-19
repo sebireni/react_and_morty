@@ -1,6 +1,6 @@
 import React from "react";
-import { useLocations } from "../../../api/useData";
-import "./allLoc.css";
+import { useLocations } from "../../../src/api/useData";
+import "./AllLoc.css";
 import { useState, useEffect } from "react";
 
 function AllLoc() {

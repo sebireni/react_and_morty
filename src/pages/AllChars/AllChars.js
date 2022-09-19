@@ -1,10 +1,10 @@
 import React from "react";
-import { useCharacters } from "../../../api/useData.js";
-import "./allChars.css";
+import { useCharacters } from "../../../src/api/useData";
+import "./AllChars.css";
 import { useState, useEffect } from "react";
-import SingleChar from "../singleChar/singleChar.js";
+import SingleChar from "../../components/SingleChar/SingleChar.js";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import SingleCharCard from "./singleCharCard.js";
+import SingleCharCard from "../../components/SingleCharCard.js";
 
 function AllChars() {
   const [pageCounter, setPageCounter] = useState(1);

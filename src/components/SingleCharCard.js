@@ -1,4 +1,4 @@
-import "./allChars.css";
+import "../pages/AllChars/AllChars.css";
 import React from "react";
 
 const SingleCharCard = ({ handleClick, charDetails }) => {

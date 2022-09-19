@@ -1,12 +1,10 @@
 import React from "react";
-import "./home.css";
+import "./Home.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import NavBar from "../../navBar/navBar";
-import CharBtn from "../../button/characters/charBtn";
-import LocBtn from "../../button/locations/locBtn";
-import Logo from "../../../assets/images/logo.png";
-import Button from "../../button/Button";
-import NavButton from "../../button/NavButton";
+import NavBar from "../../components/NavBar/NavBar";
+import Logo from "../../../src/assets/images/logo.png";
+import Button from "../../components/Button/Button";
+import NavButton from "../../components/Button/NavButton";
 
 function Home() {
   return (

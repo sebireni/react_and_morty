@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "paginationBar.scss"
+        "PaginationBar.scss"
     ],
     "names": [],
-    "file": "paginationBar.css"
+    "file": "PaginationBar.css"
 }

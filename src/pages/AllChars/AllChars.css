@@ -105,7 +105,7 @@ body.active-modal {
 }
 
 .overlay {
-  background: url("../../../assets/images/gunguybackground.png");
+  background: url("../../../src/assets/images/gunguybackground.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -150,4 +150,4 @@ body.active-modal {
   height: 50px;
   margin: 0px auto 30px;
 }
-/*# sourceMappingURL=allChars.css.map */
+/*# sourceMappingURL=AllChars.css.map */
