@@ -63,6 +63,7 @@ const AllLoc = () => {
               <SingleLocCard
                 handleClick={() => setID(loc.id)}
                 locDetails={loc}
+                key={loc.id}
               />
             );
           })}
