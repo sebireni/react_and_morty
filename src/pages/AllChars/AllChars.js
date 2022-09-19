@@ -41,14 +41,6 @@ const AllChars = () => {
   console.log(charResults);
 
   useEffect(() => {
-    // fetch(`https://rickandmortyapi.com/api/character/${ID}`)
-    //   .then((response) => response.json())
-    //   .then((data) => setClickedChar(data))
-    //   .then(() => {
-    //     if (ID !== 0 && ID !== "null" && ID !== "undefined") {
-    //       toggleModal();
-    //     }
-    //   });
     setClickedChar(charResults?.find((char) => ID === char.id));
     if (ID != null) {
       toggleModal();
