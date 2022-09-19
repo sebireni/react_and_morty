@@ -36,6 +36,11 @@ function AllLoc() {
     document.body.classList.remove("active-modal");
   }
 
+  const handleToggleModal = () => {
+    toggleModal();
+    setID(0);
+  };
+
   useEffect(() => {
     fetch(`https://rickandmortyapi.com/api/location/${ID}`)
       .then((response) => response.json())
@@ -46,11 +51,6 @@ function AllLoc() {
         }
       });
   }, [ID]);
-
-  const handleToggleModal = () => {
-    toggleModal();
-    setID(0);
-  };
 
   return (
     <>

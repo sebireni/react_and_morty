@@ -1,25 +1,15 @@
 import React from "react";
 import "./Home.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import NavBar from "../../components/NavBar/NavBar";
 import Logo from "../../../src/assets/images/logo.png";
-import Button from "../../components/Button/Button";
 import NavButton from "../../components/Button/NavButton";
 
 function Home() {
   return (
     <div id="home">
-      <img id="logo" src={Logo} />
-
+      <img id="logo" alt="Rick and Morty logo" src={Logo} />
       <div className="content">
         <NavButton route="/allCharacters" buttonText={"Characters"} />
         <NavButton route="/allLocations" buttonText={"Locations"} />
-        {/* <Link to="/allCharacters">
-          <Button buttonText="Characters" />
-        </Link> */}
-        {/* <Link to="/allLocations">
-          <Button buttonText="Locations" />
-        </Link> */}
         <h2>Description</h2>
         <p>
           This characteropedia is based on the television show Rick and Morty.

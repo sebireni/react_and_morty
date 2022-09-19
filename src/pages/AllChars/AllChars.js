@@ -3,7 +3,6 @@ import { useCharacters } from "../../../src/api/useData";
 import "./AllChars.css";
 import { useState, useEffect } from "react";
 import SingleChar from "../../components/SingleChar/SingleChar.js";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SingleCharCard from "../../components/SingleCharCard.js";
 
 function AllChars() {
@@ -51,8 +50,6 @@ function AllChars() {
     //     }
     //   });
     setClickedChar(charResults?.find((char) => ID === char.id));
-
-    console.log(ID);
     if (ID != null) {
       toggleModal();
     }
