@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import NavBar from "../../navBar/navBar";
 import CharBtn from "../../button/characters/charBtn";
 import LocBtn from "../../button/locations/locBtn";
-import Logo from "../../../logo.png";
+import Logo from "../../../assets/images/logo.png";
 import Button from "../../button/Button";
 import NavButton from "../../button/NavButton";
 
