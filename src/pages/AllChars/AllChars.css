@@ -1,0 +1,153 @@
+.charListWrapper {
+  margin: 150px auto 50px;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 30px;
+}
+
+.charListWrapper .charCard {
+  background-color: transparent;
+  position: relative;
+  width: 35vw;
+  height: 25vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3%;
+  border: 3px solid white;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.charListWrapper .charCard .cardImg {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.charListWrapper .charCard .detailWrapper {
+  width: 60%;
+}
+
+.charListWrapper .charCard .detailWrapper h2,
+.charListWrapper .charCard .detailWrapper h3 {
+  margin: 5px;
+}
+
+.charListWrapper .charCard .detailWrapper h2 {
+  font-size: 1.8rem;
+}
+
+.charListWrapper .charCard .detailWrapper h3 {
+  font-size: 24px;
+}
+
+.charListWrapper .charCard .detailWrapper .charID {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0px 10px;
+}
+
+.buttonWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.buttonWrapper button {
+  width: 300px;
+  height: 60px;
+  background-color: transparent;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.modal {
+  z-index: 5;
+}
+
+.overlay {
+  background: url("../../../src/assets/images/gunguybackground.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal-content {
+  position: absolute;
+  background: #333c;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 20%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: 8px solid rgba(251, 255, 0, 0.863);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.modal-content img {
+  width: 100%;
+}
+
+.modal-content .detWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 10px;
+}
+
+.modal-content .close-modal {
+  width: 150px;
+  height: 50px;
+  margin: 0px auto 30px;
+}
+/*# sourceMappingURL=AllChars.css.map */
