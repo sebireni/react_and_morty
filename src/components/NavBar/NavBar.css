@@ -1,7 +1,7 @@
 header {
   width: calc(100vw - 8px);
   height: 100px;
-  background-color: #97497959;
+  background-color: #02aec5e1;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,4 +38,4 @@ header ul li a {
 header ul li a:visited {
   color: #fff;
 }
-/*# sourceMappingURL=navBar.css.map */
+/*# sourceMappingURL=NavBar.css.map */
