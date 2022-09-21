@@ -38,7 +38,7 @@ const AllChars = () => {
     document.body.classList.remove("active-modal");
   }
 
-  console.log(charResults);
+  // console.log(charResults);
 
   useEffect(() => {
     setClickedChar(charResults?.find((char) => ID === char.id));

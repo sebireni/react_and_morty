@@ -13,10 +13,10 @@ function App() {
   const characters = useCharacters(1);
   const locations = useLocations(1);
 
-  console.log("Characters data: ");
-  console.log(characters);
-  console.log("Locations data: ");
-  console.log(locations);
+  // console.log("Characters data: ");
+  // console.log(characters);
+  // console.log("Locations data: ");
+  // console.log(locations);
 
   return (
     <Router>
