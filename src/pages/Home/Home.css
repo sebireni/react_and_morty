@@ -1,0 +1,63 @@
+body {
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body p {
+  width: 500px;
+  margin: auto;
+  color: white;
+  border-radius: 20px;
+  padding: 25px 25px;
+  background: linear-gradient(45deg, rgba(22, 228, 243, 0.4) 60%, rgba(255, 255, 0, 0.4));
+  margin-bottom: 50px;
+}
+
+body .logo {
+  width: 600px;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 50px;
+  -webkit-transition-duration: 3s;
+          transition-duration: 3s;
+}
+
+body .logo:active {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+body button {
+  margin: auto;
+  border-radius: 0.5em;
+  color: white;
+  border: 2px solid white;
+  width: 220px;
+  height: 60px;
+  margin: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  text-underline-offset: 0;
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  background-color: transparent;
+  font-size: 1.1rem;
+  letter-spacing: 0.3em;
+  text-align: center;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+body button:hover {
+  cursor: pointer;
+  background-color: rgba(22, 228, 243, 0.4);
+  -webkit-transform: scale(105%);
+          transform: scale(105%);
+}
+/*# sourceMappingURL=Home.css.map */

@@ -1,0 +1,41 @@
+header {
+  width: calc(100vw - 8px);
+  height: 100px;
+  background-color: #02aec5e1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+header ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  margin: 0;
+}
+
+header ul li {
+  list-style-type: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+header ul li a:visited {
+  color: #fff;
+}
+/*# sourceMappingURL=NavBar.css.map */

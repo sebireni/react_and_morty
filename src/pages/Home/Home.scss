@@ -1,0 +1,65 @@
+body {
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    width: 500px;
+    margin: auto;
+    color: white;
+    border-radius: 20px;
+    padding: 25px 25px;
+
+    background: linear-gradient(
+      45deg,
+      rgba(22, 228, 243, 0.4) 60%,
+      rgba(255, 255, 0, 0.4)
+    );
+
+    margin-bottom: 50px;
+  }
+
+  .logo {
+    width: 600px;
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 50px;
+    transition-duration: 3s;
+    &:active {
+      transform: rotate(360deg);
+    }
+  }
+
+  button {
+    margin: auto;
+
+    border-radius: 0.5em;
+    color: white;
+    border: 2px solid white;
+    width: 220px;
+    height: 60px;
+    margin: 20px;
+
+    box-sizing: border-box;
+    text-decoration: none;
+    text-underline-offset: 0;
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-size: 1.1rem;
+    letter-spacing: 0.3em;
+    text-align: center;
+
+    transition-duration: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: rgba(22, 228, 243, 0.4);
+      transform: scale(105%);
+    }
+  }
+}
