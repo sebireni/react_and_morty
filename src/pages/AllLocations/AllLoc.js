@@ -52,6 +52,7 @@ const AllLoc = () => {
           toggleModal();
         }
       });
+    // eslint-disable-next-line
   }, [ID]);
 
   return (

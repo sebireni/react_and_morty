@@ -45,6 +45,7 @@ const AllChars = () => {
     if (ID != null) {
       toggleModal();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [ID]);
 
   return (
