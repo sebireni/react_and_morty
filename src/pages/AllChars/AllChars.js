@@ -56,6 +56,7 @@ const AllChars = () => {
               <SingleCharCard
                 handleClick={() => setID(char.id)}
                 charDetails={char}
+                key={char.id}
               />
             );
           })}
