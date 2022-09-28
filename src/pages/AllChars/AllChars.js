@@ -1,9 +1,9 @@
-import React from "react";
-import { useCharacters } from "../../../src/api/useData";
-import "./AllChars.css";
-import { useState, useEffect } from "react";
-import SingleChar from "../../components/SingleChar/SingleChar.js";
-import SingleCharCard from "../../components/SingleChar/SingleCharCard.js";
+import React from 'react';
+import { useCharacters } from '../../../src/api/useData';
+import './AllChars.css';
+import { useState, useEffect } from 'react';
+import SingleChar from '../../components/SingleChar/SingleChar.js';
+import SingleCharCard from '../../components/SingleChar/SingleCharCard.js';
 
 const AllChars = () => {
   const [pageCounter, setPageCounter] = useState(1);
@@ -33,9 +33,9 @@ const AllChars = () => {
   };
 
   if (modal) {
-    document.body.classList.add("active-modal");
+    document.body.classList.add('active-modal');
   } else {
-    document.body.classList.remove("active-modal");
+    document.body.classList.remove('active-modal');
   }
 
   // console.log(charResults);
@@ -50,7 +50,7 @@ const AllChars = () => {
 
   return (
     <>
-      <div className="charListWrapper">
+      <div className='charListWrapper'>
         {charResults &&
           charResults.map((char) => {
             return (
@@ -63,7 +63,7 @@ const AllChars = () => {
           })}
       </div>
 
-      <div className="buttonWrapper">
+      <div className='buttonWrapper'>
         <button onClick={prevPage}>Previous page</button>
         {charInfo && (
           <h2>
@@ -74,18 +74,18 @@ const AllChars = () => {
       </div>
 
       {modal && (
-        <div className="modal">
+        <div className='modal'>
           <div
             onClick={() => {
               toggleModal();
               setID();
             }}
-            className="overlay"
+            className='overlay'
           ></div>
-          <div className="modal-content">
+          <div className='modal-content'>
             {clickedChar && <SingleChar clickedCharDetails={clickedChar} />}
             <button
-              className="close-modal"
+              className='close-modal'
               onClick={() => {
                 toggleModal();
                 setID();

@@ -1,6 +1,6 @@
 // pre-existing file
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 /**
      Fetch data from the given url. If it can't get any data from the url, than it writes a message into the console.
@@ -14,7 +14,7 @@ export const useFetch = (initUrl) => {
   useEffect(() => {
     fetch(url)
       .then((response) => {
-        if (response.status !== 200) return "There must be a problem";
+        if (response.status !== 200) return 'There must be a problem';
         return response.json();
       })
       .then((json) => setData(json));

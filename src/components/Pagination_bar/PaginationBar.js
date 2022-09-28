@@ -1,6 +1,6 @@
-import React from "react";
-import { useState } from "react";
-import "./PaginationBar.css";
+import React from 'react';
+import { useState } from 'react';
+import './PaginationBar.css';
 
 const PaginationBar = (props) => {
   const [pageCounter, setPageCounter] = useState(1);
@@ -14,7 +14,7 @@ const PaginationBar = (props) => {
   };
 
   return (
-    <div className="buttonWrapper">
+    <div className='buttonWrapper'>
       <button onClick={prevPage}>Previous page</button>
       <button onClick={nextPage}>Next page</button>
     </div>

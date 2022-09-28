@@ -1,9 +1,9 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { useLocations } from "../../../src/api/useData";
-import "./AllLoc.css";
-import SingleLoc from "../../components/SingleLocation/SingleLoc";
-import SingleLocCard from "../../components/SingleLocation/SingleLocCard";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { useLocations } from '../../../src/api/useData';
+import './AllLoc.css';
+import SingleLoc from '../../components/SingleLocation/SingleLoc';
+import SingleLocCard from '../../components/SingleLocation/SingleLocCard';
 
 const AllLoc = () => {
   const [pageCounter, setPageCounter] = useState(1);
@@ -33,9 +33,9 @@ const AllLoc = () => {
   };
 
   if (modal) {
-    document.body.classList.add("active-modal");
+    document.body.classList.add('active-modal');
   } else {
-    document.body.classList.remove("active-modal");
+    document.body.classList.remove('active-modal');
   }
 
   const handleToggleModal = () => {
@@ -48,7 +48,7 @@ const AllLoc = () => {
       .then((response) => response.json())
       .then((data) => setClickedLoc(data))
       .then(() => {
-        if (ID !== 0 && ID !== "null" && ID !== "undefined") {
+        if (ID !== 0 && ID !== 'null' && ID !== 'undefined') {
           toggleModal();
         }
       });
@@ -57,7 +57,7 @@ const AllLoc = () => {
 
   return (
     <>
-      <div className="locListWrapper">
+      <div className='locListWrapper'>
         {locResults &&
           locResults.map((loc) => {
             return (
@@ -70,7 +70,7 @@ const AllLoc = () => {
           })}
       </div>
 
-      <div className="buttonWrapper">
+      <div className='buttonWrapper'>
         <button onClick={prevPage}>Previous page</button>
         {locInfo && (
           <h2>
@@ -81,11 +81,11 @@ const AllLoc = () => {
       </div>
 
       {modal && (
-        <div className="modal">
-          <div onClick={handleToggleModal} className="overlay"></div>
-          <div className="modal-content">
+        <div className='modal'>
+          <div onClick={handleToggleModal} className='overlay'></div>
+          <div className='modal-content'>
             {clickedLoc && <SingleLoc clickedLocDetails={clickedLoc} />}
-            <button className="close-modal" onClick={handleToggleModal}>
+            <button className='close-modal' onClick={handleToggleModal}>
               X
             </button>
           </div>
