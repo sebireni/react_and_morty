@@ -8,9 +8,10 @@ import SingleLocCard from '../../components/SingleLocation/SingleLocCard';
 const AllLoc = () => {
   const [pageCounter, setPageCounter] = useState(1);
 
-  const locations = useLocations(pageCounter);
-  const locResults = locations.results;
-  const locInfo = locations.info;
+  // const locations = useLocations(pageCounter);
+  // const locResults = locations.results;
+  // const locInfo = locations.info;
+  const { results: locResults, info: locInfo } = useLocations(pageCounter);
 
   const nextPage = () => {
     if (locInfo.pages > pageCounter) {
