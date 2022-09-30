@@ -14,8 +14,6 @@ const AllChars = () => {
   const { results: charResults, info: charInfo } = useCharacters(pageCounter);
   // const charResults = characters.results;
   // const charInfo = characters.info;
-  console.log('results', charResults);
-  console.log('info', charInfo);
 
   const nextPage = () => {
     if (charInfo.pages > pageCounter) {
@@ -39,10 +37,7 @@ const AllChars = () => {
     document.body.classList.remove('active-modal');
   }
 
-  // console.log(charResults);
-
   const handleClick = (id) => {
-    // console.log('ID', ID);
     setClickedChar(charResults?.find((char) => char.id === id));
     if (id) {
       toggleModal();
