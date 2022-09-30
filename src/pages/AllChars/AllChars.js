@@ -1,16 +1,21 @@
 import React from 'react';
 import { useCharacters } from '../../../src/api/useData';
 import './AllChars.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import SingleChar from '../../components/SingleChar/SingleChar.js';
 import SingleCharCard from '../../components/SingleChar/SingleCharCard.js';
 
 const AllChars = () => {
   const [pageCounter, setPageCounter] = useState(1);
+  const [modal, setModal] = useState(false);
+  // const [ID, setID] = useState(null);
+  const [clickedChar, setClickedChar] = useState(null);
 
-  const characters = useCharacters(pageCounter);
-  const charResults = characters.results;
-  const charInfo = characters.info;
+  const { results: charResults, info: charInfo } = useCharacters(pageCounter);
+  // const charResults = characters.results;
+  // const charInfo = characters.info;
+  console.log('results', charResults);
+  console.log('info', charInfo);
 
   const nextPage = () => {
     if (charInfo.pages > pageCounter) {
@@ -24,10 +29,6 @@ const AllChars = () => {
     }
   };
 
-  const [modal, setModal] = useState(false);
-  const [ID, setID] = useState();
-  const [clickedChar, setClickedChar] = useState();
-
   const toggleModal = () => {
     setModal(!modal);
   };
@@ -40,13 +41,13 @@ const AllChars = () => {
 
   // console.log(charResults);
 
-  useEffect(() => {
-    setClickedChar(charResults?.find((char) => ID === char.id));
-    if (ID != null) {
+  const handleClick = (id) => {
+    // console.log('ID', ID);
+    setClickedChar(charResults?.find((char) => char.id === id));
+    if (id) {
       toggleModal();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [ID]);
+  };
 
   return (
     <>
@@ -55,7 +56,7 @@ const AllChars = () => {
           charResults.map((char) => {
             return (
               <SingleCharCard
-                handleClick={() => setID(char.id)}
+                handleClick={() => handleClick(char.id)}
                 charDetails={char}
                 key={char.id}
               />
@@ -78,7 +79,7 @@ const AllChars = () => {
           <div
             onClick={() => {
               toggleModal();
-              setID();
+              // setID(null);
             }}
             className='overlay'
           ></div>
@@ -88,7 +89,7 @@ const AllChars = () => {
               className='close-modal'
               onClick={() => {
                 toggleModal();
-                setID();
+                // setID(null);
               }}
             >
               X
