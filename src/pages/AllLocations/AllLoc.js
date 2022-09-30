@@ -13,15 +13,15 @@ const AllLoc = () => {
 
   const { results: locResults, info: locInfo } = useLocations(pageCounter);
 
-  const nextPage = () => {
-    if (locInfo.pages > pageCounter) {
-      setPageCounter(pageCounter + 1);
-    }
-  };
-
   const prevPage = () => {
     if (pageCounter > 1) {
       setPageCounter(pageCounter - 1);
+    }
+  };
+
+  const nextPage = () => {
+    if (locInfo.pages > pageCounter) {
+      setPageCounter(pageCounter + 1);
     }
   };
 

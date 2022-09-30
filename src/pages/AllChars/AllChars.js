@@ -63,16 +63,10 @@ const AllChars = () => {
 
       {modal && (
         <div className='modal'>
-          <div
-            onClick={() => toggleModal()}
-            className='overlay'
-          ></div>
+          <div onClick={() => toggleModal()} className='overlay'></div>
           <div className='modal-content'>
             {clickedChar && <SingleChar clickedCharDetails={clickedChar} />}
-            <button
-              className='close-modal'
-              onClick={() => toggleModal()}
-            >
+            <button className='close-modal' onClick={() => toggleModal()}>
               X
             </button>
           </div>
