@@ -1,19 +1,17 @@
-import React from 'react';
-import { useCharacters } from '../../../src/api/useData';
-import './AllChars.css';
-import { useState } from 'react';
+import React, { useState } from 'react';
+
 import SingleChar from '../../components/SingleChar/SingleChar.js';
 import SingleCharCard from '../../components/SingleChar/SingleCharCard.js';
+import { useCharacters } from '../../../src/api/useData';
+
+import './AllChars.css';
 
 const AllChars = () => {
   const [pageCounter, setPageCounter] = useState(1);
   const [modal, setModal] = useState(false);
-  // const [ID, setID] = useState(null);
   const [clickedChar, setClickedChar] = useState(null);
 
   const { results: charResults, info: charInfo } = useCharacters(pageCounter);
-  // const charResults = characters.results;
-  // const charInfo = characters.info;
 
   const nextPage = () => {
     if (charInfo.pages > pageCounter) {
@@ -30,12 +28,6 @@ const AllChars = () => {
   const toggleModal = () => {
     setModal(!modal);
   };
-
-  if (modal) {
-    document.body.classList.add('active-modal');
-  } else {
-    document.body.classList.remove('active-modal');
-  }
 
   const handleClick = (id) => {
     setClickedChar(charResults?.find((char) => char.id === id));
@@ -72,20 +64,14 @@ const AllChars = () => {
       {modal && (
         <div className='modal'>
           <div
-            onClick={() => {
-              toggleModal();
-              // setID(null);
-            }}
+            onClick={() => toggleModal()}
             className='overlay'
           ></div>
           <div className='modal-content'>
             {clickedChar && <SingleChar clickedCharDetails={clickedChar} />}
             <button
               className='close-modal'
-              onClick={() => {
-                toggleModal();
-                // setID(null);
-              }}
+              onClick={() => toggleModal()}
             >
               X
             </button>

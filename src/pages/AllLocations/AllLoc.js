@@ -1,16 +1,16 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+
 import { useLocations } from '../../../src/api/useData';
-import './AllLoc.css';
 import SingleLoc from '../../components/SingleLocation/SingleLoc';
 import SingleLocCard from '../../components/SingleLocation/SingleLocCard';
 
+import './AllLoc.css';
+
 const AllLoc = () => {
   const [pageCounter, setPageCounter] = useState(1);
+  const [modal, setModal] = useState(false);
+  const [clickedLoc, setClickedLoc] = useState(null);
 
-  // const locations = useLocations(pageCounter);
-  // const locResults = locations.results;
-  // const locInfo = locations.info;
   const { results: locResults, info: locInfo } = useLocations(pageCounter);
 
   const nextPage = () => {
@@ -25,36 +25,16 @@ const AllLoc = () => {
     }
   };
 
-  const [modal, setModal] = useState(false);
-  const [ID, setID] = useState(0);
-  const [clickedLoc, setClickedLoc] = useState();
-
   const toggleModal = () => {
     setModal(!modal);
   };
 
-  if (modal) {
-    document.body.classList.add('active-modal');
-  } else {
-    document.body.classList.remove('active-modal');
-  }
-
-  const handleToggleModal = () => {
-    toggleModal();
-    setID(0);
+  const handleClick = (id) => {
+    setClickedLoc(locResults?.find((loc) => loc.id === id));
+    if (id) {
+      toggleModal();
+    }
   };
-
-  useEffect(() => {
-    fetch(`https://rickandmortyapi.com/api/location/${ID}`)
-      .then((response) => response.json())
-      .then((data) => setClickedLoc(data))
-      .then(() => {
-        if (ID !== 0 && ID !== 'null' && ID !== 'undefined') {
-          toggleModal();
-        }
-      });
-    // eslint-disable-next-line
-  }, [ID]);
 
   return (
     <>
@@ -63,7 +43,7 @@ const AllLoc = () => {
           locResults.map((loc) => {
             return (
               <SingleLocCard
-                handleClick={() => setID(loc.id)}
+                handleClick={() => handleClick(loc.id)}
                 locDetails={loc}
                 key={loc.id}
               />
@@ -83,10 +63,10 @@ const AllLoc = () => {
 
       {modal && (
         <div className='modal'>
-          <div onClick={handleToggleModal} className='overlay'></div>
+          <div onClick={toggleModal} className='overlay'></div>
           <div className='modal-content'>
             {clickedLoc && <SingleLoc clickedLocDetails={clickedLoc} />}
-            <button className='close-modal' onClick={handleToggleModal}>
+            <button className='close-modal' onClick={toggleModal}>
               X
             </button>
           </div>
